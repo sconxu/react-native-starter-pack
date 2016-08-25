@@ -57,8 +57,6 @@ export default class Index extends React.Component {
             StatusBar.setBackgroundColor('transparent', false);
             StatusBar.setTranslucent(true);
         }
-
-        // ErrorUtils.reportError('test error');
     }
 
     componentDidMount() {

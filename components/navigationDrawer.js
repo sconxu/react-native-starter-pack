@@ -35,7 +35,7 @@ export default class NavigationDrawer extends React.Component {
                         shadowColor: "#000000",
                         shadowOpacity: 0.1,
                         shadowRadius: 0,
-                        marginTop: 20
+                        marginTop: 0
                     }
                 }}
                 tweenDuration={this.tweenDuration}
