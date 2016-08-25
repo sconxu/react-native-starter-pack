@@ -39,11 +39,12 @@ export default class NavbarButton extends React.Component {
 
 var styles = StyleSheet.create({
   container: {
-    height: 50,
-    justifyContent: 'center',
+      flex: 1,
+      justifyContent: 'center',
+      paddingLeft: 10,
+      paddingRight: 10
   },
   text: {
-    color: 'white',
-    fontSize: 17
+
   }
 });

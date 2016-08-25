@@ -27,7 +27,7 @@ export default class NavbarBase extends React.Component {
         return (
             <NavbarButton
                 action={Actions.pop}
-                text='Back'
+                text='back'
             />
         );
     }
@@ -37,7 +37,7 @@ export default class NavbarBase extends React.Component {
     renderDrawerButton() {
         return (
             <TouchableWithoutFeedback onPress={this.toggleDrawer}>
-                <View style={{justifyContent: 'center'}}>
+                <View style={styles.drawerButtonContainer}>
                     <Text>=</Text>
                 </View>
             </TouchableWithoutFeedback>
@@ -139,6 +139,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         backgroundColor: 'darkgrey',
         paddingTop: 20,
+    },
+    drawerButtonContainer: {
+        flex: 1,
+        justifyContent: 'center',
         paddingLeft: 10,
         paddingRight: 10
     },
