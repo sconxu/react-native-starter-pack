@@ -103,7 +103,7 @@ export default class Index extends React.Component {
                             <Scene key='navigationDrawer' initial={false} component={NavigationDrawer} hideNavBar={true}>
                                 <Scene key='main' navBar={Navbar}>
                                     <Scene key='home' component={HomeView} title='HomeView' sceneStyle={{marginTop: marginTop}}/>
-                                    <Scene key='page1' component={Page1View} title='Page1View' sceneStyle={{marginTop: marginTop}}/>
+                                    <Scene key='page1' component={Page1View} initial={true} title='Page1View' sceneStyle={{marginTop: marginTop}}/>
                                     <Scene key='page2' component={Page2View} title='Page2View' sceneStyle={{marginTop: marginTop}}/>
                                 </Scene>
                             </Scene>

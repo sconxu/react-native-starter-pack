@@ -13,7 +13,20 @@ export const actions = {
 export function setNavbarDetail(type) {
     return (dispatch, getState) => {
         switch (type) {
+            case 'page1':
+                var value = {
+                    title: 'PAGE 1 TITLE',
+                }
 
+                dispatch({
+                    type: actions.SET_NAVBAR_DETAIL,
+                    payload: {
+                        detail: type,
+                        value: value
+                    }
+                });
+
+                break;
             default:
         }
     }
