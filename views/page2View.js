@@ -1,5 +1,5 @@
 /**
-  * @providesModule HomeView
+  * @providesModule Page2View
   */
 
 'use strict';
@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Map } from 'immutable';
 
-class HomeView extends React.Component {
+class Page2View extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -22,7 +22,7 @@ class HomeView extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>home view</Text>
+                <Text>Page 2</Text>
             </View>
         );
     }
@@ -31,7 +31,6 @@ class HomeView extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'lightgrey',
         alignItems: 'center',
         justifyContent: 'center'
     }
@@ -58,4 +57,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeView);
+export default connect(mapStateToProps, mapDispatchToProps)(Page2View);

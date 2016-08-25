@@ -21,6 +21,7 @@ export default class NavigationDrawer extends React.Component {
 
     render() {
         const children = this.props.navigationState.children;
+        
         return (
             <Drawer
                 type='overlay'
@@ -31,11 +32,12 @@ export default class NavigationDrawer extends React.Component {
                 openDrawerOffset={0.3}
                 styles={{
                     drawer: {
-                        backgroundColor: 'white',
-                        shadowColor: "#000000",
+                        backgroundColor: 'darkgrey',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.1,
                         shadowRadius: 0,
-                        marginTop: 0
+                        marginTop: 0,
+                        paddingTop: 20
                     }
                 }}
                 tweenDuration={this.tweenDuration}

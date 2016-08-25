@@ -33,11 +33,11 @@ var DrawerItem = React.createClass({
     render() {
         return (
             <TouchableHighlight
-            style={styles.drawerItemContainer}
-            underlayColor='lightgrey'
-            onPress={() => this.onPress(this.props.text)}
+                style={styles.drawerItemContainer}
+                underlayColor='lightgrey'
+                onPress={() => this.onPress(this.props.text)}
             >
-            <Text style={styles.drawerItem}>{this.props.text}</Text>
+                <Text style={styles.drawerItemText}>{this.props.text}</Text>
             </TouchableHighlight>
         )
     }
@@ -62,6 +62,18 @@ class DrawerContent extends React.Component {
     onItemSelected(data) {
         this.context.drawer.close();
 
+        if (data === 'Home') {
+            Actions.home();
+        }
+
+        if (data === 'Page 1') {
+            Actions.page1();
+        }
+
+        if (data === 'Page 2') {
+            Actions.page2();
+        }
+
         console.log(data);
     }
 
@@ -74,7 +86,7 @@ class DrawerContent extends React.Component {
     render() {
         var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
-        let dataSourceArray = ['Option-1', 'Option-2']
+        let dataSourceArray = ['Home', 'Page 1', 'Page 2'];
 
         return (
             <View>
@@ -97,40 +109,16 @@ var styles = StyleSheet.create({
         justifyContent: 'center',
         borderBottomWidth: 1,
         borderColor: 'lightgrey',
-        marginLeft: 5,
-        marginRight: 5,
-        paddingLeft: 5
+        paddingLeft: 5,
+        paddingRight: 5
     },
-    drawerItem: {
+    drawerItemText: {
 
-    },
-    userInfoContainer: {
-        padding: 10,
-        backgroundColor: 'darkgrey'
-    },
-    userPictureContainer: {
-        marginBottom: 10,
-        width: 100,
-        height: 100,
-        borderRadius: 50,
-        overflow: 'hidden',
-        alignSelf: 'center'
-    },
-    userPicture: {
-        width: 100,
-        height: 100
-    },
-    welcomeTextContainer: {
-        alignSelf: 'center'
-    },
-    welcomeText: {
-        fontSize: 20,
-        color: 'lightgrey'
     }
 });
 
 const actions = [
-    navbarActions
+
 ];
 
 function mapStateToProps(state) {

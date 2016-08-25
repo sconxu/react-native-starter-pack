@@ -25,6 +25,8 @@ import { Provider, connect } from 'react-redux';
 import constructStore from 'ConstructStore';
 import NavigationDrawer from 'NavigationDrawer';
 import HomeView from 'HomeView';
+import Page1View from 'Page1View';
+import Page2View from 'Page2View';
 import Navbar from 'HomeViewNavbar';
 import ErrorModal from 'ErrorModal';
 import InfoModal from 'InfoModal';
@@ -101,6 +103,8 @@ export default class Index extends React.Component {
                             <Scene key='navigationDrawer' initial={false} component={NavigationDrawer} hideNavBar={true}>
                                 <Scene key='main' navBar={Navbar}>
                                     <Scene key='home' component={HomeView} title='HomeView' sceneStyle={{marginTop: marginTop}}/>
+                                    <Scene key='page1' component={Page1View} title='Page1View' sceneStyle={{marginTop: marginTop}}/>
+                                    <Scene key='page2' component={Page2View} title='Page2View' sceneStyle={{marginTop: marginTop}}/>
                                 </Scene>
                             </Scene>
                         </Scene>

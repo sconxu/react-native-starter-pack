@@ -70,7 +70,7 @@ export default class NavbarBase extends React.Component {
 
     renderLogo() {
         return (
-            <Text>Logo</Text>
+            <Text>logo</Text>
         );
     }
 
