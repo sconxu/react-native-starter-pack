@@ -19,7 +19,7 @@ class HomeView extends React.Component {
         super(props);
     }
 
-    render() {
+    render() {    
         return (
             <View style={styles.container}>
                 <Text>home view</Text>
